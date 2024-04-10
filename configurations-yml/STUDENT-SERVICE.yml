@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: STUDENT-SERVICE
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/microservices
+server:
+    port: 8082
+
+# EUREKA SERVER CONFIGURATION - START
+# To Register the service with eureka server. Other services can discover and communicate this service
+eureka:
+    client:
+        register-with-eureka: true
+        fetch-registry: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        hostname: localhost
+# EUREKA SERVER CONFIGURATION - END
